@@ -1,0 +1,98 @@
+:root{
+    --bisque: rgb(252, 240, 224);
+}
+body{
+    background: #222;
+}
+.navbar{
+    z-index: 4;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.overlay-1{
+    z-index: 1000;
+    background: #222;
+}
+.overlay-2{
+    z-index: 999;
+    background: var(--bisque);
+}
+.about-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    opacity: .2;
+    font-size: 8rem;
+    overflow: hidden;
+    z-index: 1;
+}
+.about-text{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    max-width: 80%;
+    margin: auto;
+    z-index: 3;
+    transition: all .3s ease-in-out;
+}
+.about-text p, h2{
+    text-align: center;
+}
+.about-text h2{
+    font-size: 5rem;
+    color: var(--bisque);
+}
+.header-1{
+    cursor: pointer;
+}
+.line{
+    height: 3px;
+    background-color: var(--bisque);
+    width: 0;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    background-color: var(--bisque);
+    transition: .3s ease-in-out;
+}
+.header-1:hover .line{
+    width: 300px;
+}
+.about-text p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 300;
+}
+.contact{
+    background-color: var(--bisque);
+}
+footer{
+    color: #fff;
+}
+
+@media screen and (max-width: 780px) {
+    .about-modal{
+        font-size: 4rem;
+    }
+    .about-text h2{
+        font-size: 3rem;
+    }
+    .about-text p{
+        font-size: .7rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+    }
+}
